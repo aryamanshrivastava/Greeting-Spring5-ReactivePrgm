@@ -5,8 +5,6 @@ import jakarta.persistence.GenerationType;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;
 
-import javax.annotation.processing.Generated;
-
 @Table(name = "greeting")
 public class Greeting {
     @Id

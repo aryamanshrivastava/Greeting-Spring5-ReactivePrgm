@@ -1,11 +1,16 @@
 package com.bridgelabz.greetingspring5.model;
 
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;
+
+import javax.annotation.processing.Generated;
 
 @Table(name = "greeting")
 public class Greeting {
     @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private int id;
     private String name;
     private String message;

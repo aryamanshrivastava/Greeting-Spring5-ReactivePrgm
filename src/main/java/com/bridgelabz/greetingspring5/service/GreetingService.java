@@ -28,5 +28,11 @@ public class GreetingService implements IGreetingService {
         return repo.findById(id);
     }
 
+    @Override
+    public Mono<Greeting> deleteGreetingById(int id) {
+        return repo.findById(id)
+                .flatMap(existingGreeting -> repo.delete(existingGreeting)
+                        .then(Mono.just(existingGreeting)));
+    }
 }
 

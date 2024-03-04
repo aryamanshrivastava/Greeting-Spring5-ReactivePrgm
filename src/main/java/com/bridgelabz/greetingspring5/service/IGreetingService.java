@@ -10,4 +10,6 @@ public interface IGreetingService {
     Flux<Greeting> getGreeting();
 
     Mono<Greeting> getGreetingById(int id);
+
+    Mono<Greeting> deleteGreetingById(int id);
 }
